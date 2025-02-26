@@ -1,0 +1,22 @@
+.notFound {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 109px;
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21.94px;
+  margin-bottom: 37px;
+}
+
+.btnReset {
+  background-color: #2ee5ac;
+  &:hover {
+    background-color: darken(#2ee5ac, 10%);
+  }
+}

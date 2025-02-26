@@ -1,0 +1,101 @@
+@import "../../../../styles/variables.scss";
+
+$input-border-width: 1px;
+$input-border-color: $color-border;
+$input-border-radius: 16px;
+$input-padding-x: 12px;
+$input-padding-y: 8px;
+$font: $font-input-text;
+$height: 45px;
+
+.formText {
+  height: fit-content;
+  width: 100%;
+
+  &>input {
+    height: $height;
+    width: 100%;
+    box-sizing: border-box;
+    padding: $input-padding-y $input-padding-x;
+    border: $input-border-width solid $input-border-color;
+    border-radius: $input-border-radius;
+    color: inherit;
+    transition: box-shadow 0.15s;
+    font: $font;
+
+    &::placeholder {
+      color: #D1D1D1;
+      font: $font;
+    }
+
+    &:focus,
+    &:focus-visible {
+      // border-color: #6A7080;
+      // box-shadow: 0px 0px 0px 4px $color-gray;
+      outline: none;
+    }
+
+    &:hover {
+      background-color: #FFFFFF;
+    }
+  }
+
+  &.invalid {
+    &>input {
+      border-color: $color-danger;
+      background-color: #FBEFEF;
+    }
+  }
+
+  &.lg {
+    &>input {
+      padding-top: 18px;
+      padding-bottom: 18px;
+    }
+  }
+
+  &.sm {
+    &>input {
+      padding-top: 4px;
+      padding-bottom: 4px;
+      font-size: 14px;
+    }
+  }
+
+  &.hasIcon {
+    position: relative;
+
+    &>input {
+      padding-left: 37px;
+    }
+  }
+}
+
+.icon {
+  position: absolute;
+  left: 13px;
+  top: calc($height/2);
+  transform: translateY(-50%);
+  width: 13px;
+  height: 14px;
+}
+
+.formLabel {
+  display: block;
+  margin-bottom: 6px;
+  font: $font;
+}
+
+.feedback {
+  display: flex;
+  align-items: center;
+  margin-top: 6px;
+  color: $color-danger;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 133.33%;
+
+  svg {
+    margin-right: 4px;
+  }
+}

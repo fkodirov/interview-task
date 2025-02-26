@@ -1,0 +1,53 @@
+@import "./variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  font-family: 'Roboto', sans-serif;
+  line-height: 14.06px;
+  font-weight: 400;
+}
+
+
+body {
+  background-color: #FAFAFA;
+  margin: 0;
+  min-height: 100vh;
+  min-width: 320px;
+  
+}
+section{
+  padding: 41px 52px 49px 48px;
+  @media (min-width:1054px) {
+    padding: 41px calc((100% - 1055px + 96px) / 2);
+  }
+}
+
+
+h1{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 31.69px;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+button{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 14.63px;
+
+  color: #FFFFFF;
+  border: none;
+  height: 30px;
+  width: 95px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+  &:hover{
+    cursor: pointer;
+  }
+
+}
