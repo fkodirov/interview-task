@@ -2,7 +2,7 @@ import React, { createContext, useState, useEffect, useContext } from 'react'
 import axios from 'axios'
 import { Test, Site } from '../components/types/types'
 
-interface TestContextType {
+export interface TestContextType {
   tests: Test[]
   sites: Site[]
   loading: boolean
@@ -10,9 +10,10 @@ interface TestContextType {
   getTestById: (id: number) => Test | undefined
   getSiteUrl: (siteId: number) => string
 }
-const BASE_URL= 'http://localhost:3100';
+export const BASE_URL= 'http://localhost:3100';
 
 const TestContext = createContext<TestContextType | undefined>(undefined)
+export { TestContext }
 
 export const TestProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [tests, setTests] = useState<Test[]>([])

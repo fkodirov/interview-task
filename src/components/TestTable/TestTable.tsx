@@ -29,7 +29,7 @@ const TestTable: React.FC<TestTableProps> = ({ tests, onSort, onAction }) => {
   };
 
   const formatSite = (url: string) => {
-    return url.replace(/^(https?:\/\/)?(www\.)?/, "");
+    return url?.replace(/^(https?:\/\/)?(www\.)?/, "");
   };
 
   const handleKeyDown = (
